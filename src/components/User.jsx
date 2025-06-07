@@ -11,14 +11,14 @@ const User = () => {
     }
 
   let getfun=async()=>{
-      let res=await fetch('http://localhost:3000/auth/show')
+      let res=await fetch('https://background-ne78.onrender.com/auth/show')
       let data=await res.json()
       setdata(data)
       console.log(data)
       
   }
   let postfun=async()=>{
-    let res=await fetch('http://localhost:3000/auth/insert',{
+    let res=await fetch('https://background-ne78.onrender.com/auth/insert',{
         method:'POST',
         headers:{'Content-type':'application/json'},
         body:JSON.stringify(input)
@@ -28,7 +28,7 @@ const User = () => {
     console.log(data)
   }
   let deletefun=async(id)=>{
-    let res=await fetch(`http://localhost:3000/auth/delete/${id}`,{
+    let res=await fetch(`https://background-ne78.onrender.com/auth/delete/${id}`,{
         method:'DELETE'
     })
     let data=await res.json()
